@@ -75,13 +75,14 @@ public abstract class Codierer {
 
     public static void main(String[] args){
 
-        String s = Codierer.encode("Leon hat einen sehr sehr sehr kleinen Pimmel", new KeyCode(3));
+        String s =  Codierer.encode("In der aentike wurde die Mechaenik aels wichtige theoretische Grundlaege vieler heutiger Ingenieurwissenschaeften begruendet aerchimedes aeristoteles und Heron von aelexaendriae veroeffentlichten Buecher und Schriften ueber Hebel Schraeube Schiefe Ebene Seil Flaeschenzug und weitere Erfindungen Kaetaepulte verbesserte maen durch systemaetische Experimente bis maen die besten aebmessungen gefunden haette aerchimedes maechte Experimente mit der Waesserverdraengung verschiedener Metaelle und Heron baeute eine erste Daempfmaeschine Fuer daes griechische Theaeter wurden aeuch schon erste aeutomaeten gebaeut die sich selbstaendig bewegen konnten Die Roemer uebernaehmen die griechische Technik maechten selber aeber vergleichsweise geringe Fortschritte wie Kraene mit Flaeschenzuegen und Tretraedern verbesserte Kaetaepulte und erste Schleif und Drehmaeschinen sowie Waessermuehlen" +
+                "Im Mittelaelter breiteten sich die Wind und Waessermuehlen ueber gaenz Europae aeus und wurden zur wichtigsten Energiequelle Die Muehlenbaeuer saemmelten viele Erfaehrungen mit den Wind und Waesserraedern den Getrieben Traensmissionen sowie den sonstigen mechaenischen uebertraegungselementen aeuf dem militaerischen Gebiet wurden die Kaetaepulte von den Tribocken aebgeloest Gegen Ende des Mittelaelters entstaend mit der Feinmechaenik ein neuer Gewerbezweig der sich mit dem Baeu von Uhren und Messgeraeten beschaeftigte und daebei viele Erfaehrungen mit der Praezisionsbeaerbeitung von Metaellteilen saemmelte die meist aeus Messing bestaenden Fuer die Feinbeaerbeitung von Eisen gaeb es Schlosser Mit den Zuenften und Gilden entstaenden erstmaels Institutionen die sich mit dem Wissen ihres Gewerbes aeuseinaendersetzten", new Complex_KeyCode(new int[]{1,2,3}));
         System.out.println(s);
 
 
-        printHashMap(occurencies(s,0,1));
+        printHashMap(occurencies(s,0,3));
 
-        String s1 = Codierer.decode(s, new KeyCode(3));
+        String s1 = Codierer.decode(s, new Complex_KeyCode(new int[]{1,2,3}));
         System.out.println(s1);
 
 
