@@ -5,7 +5,7 @@ public class Codierer {
 
 
     public static char[] stringToChar(String x){
-        String s = x.toLowerCase();
+        String s = x.toUpperCase();
 
         char[] a = new char[s.length()];
         for(int i = 0; i < s.length(); i++){

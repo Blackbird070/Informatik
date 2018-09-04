@@ -1,5 +1,8 @@
 package pa_codierer;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Finn_codierer_3 {
 
 
@@ -26,36 +29,37 @@ public class Finn_codierer_3 {
     }
 
 
-    public static void funktion(short[] x) {
-        int i;
-
-        for (i = 0; i < x.length; i += 3) {
-            x[i] = x[(i + 3) % x.length];
+    public static short[] keyEncode(short[] s, int key){
+        short[] finish = new short[s.length];
+        for(int i = 0; i < s.length; i++){
+            finish[i] = (short)((s[i] + key) % 27);
         }
-        for (i = 1; i < x.length; i += 3) {
-            x[i] = x[(i + 3) % x.length];
-        }
-        for (i = 2; i < x.length; i += 3) {
-            x[i] = x[(i + 3) % x.length];
-        }
-
-
+        return finish;
     }
 
-    public static void main(String[] arg) {
-        short[] x = convert(stringToChar("abcdefg"));
-        for (int i = 0; i < x.length; i++) {
-            System.out.print(x[i] + " ");
+    public static String backToBack(short[] a){
+        String s = "";
+        for(short sh:a){
+            if(sh == 0) s += " ";
+            else{
+                s += (char)(64 + sh);
+            }
         }
+        return s;
+    }
+
+
+
+
+    public static void main(String[] arg) {
+        short[] x = convert(stringToChar("leon is the capital of the province of leon located in the northwest of spain Its city population of  makes it the largest municipality in the province accounting for more than one quarter of the provinces population Including the metropolitan area the population is estimated at "));
+        System.out.println(Arrays.toString(x));
 
         System.out.println("\n----------------------------------");
+        short[] encode = keyEncode(x , 23);
 
-        funktion(x);
-
-        for (int i = 0; i < x.length; i++) {
-            System.out.print(x[i] + " ");
-        }
-
+        System.out.println(Arrays.toString(encode));
+        System.out.println(backToBack(encode));
     }
 
 
