@@ -5,7 +5,7 @@ public class Codierer {
 
 
     public static char[] stringToChar(String x){
-        String s = x.toUpperCase();
+        String s = x.toLowerCase();
 
         char[] a = new char[s.length()];
         for(int i = 0; i < s.length(); i++){
@@ -17,7 +17,7 @@ public class Codierer {
 
 
     public static void main(String[] arg){
-        short[] ar = convert(stringToChar("Leon hat den größten"));
+        short[] ar = convert(stringToChar("Leon"));
 
         encode(ar);
 
