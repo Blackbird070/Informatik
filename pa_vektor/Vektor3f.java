@@ -3,11 +3,19 @@ package pa_vektor;
 import pa_vektor.Vektor2f;
 
 public class Vektor3f extends Vektor2f {
-    float z;
+    private float z;
 
     //Konstruktor
     public Vektor3f(float x, float y, float z){
         super(x, y);
+        this.z = z;
+    }
+
+    public float getZ() {
+        return z;
+    }
+
+    public void setZ(float z) {
         this.z = z;
     }
 

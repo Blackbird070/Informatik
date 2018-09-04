@@ -15,7 +15,6 @@ public class Vektor2f {
     }
 
     public void setX(float x) {
-        if(x < 0) x = -x;
         this.x = x;
     }
 
@@ -57,19 +56,6 @@ public class Vektor2f {
 
 
 
-    public static void main(String[] arg){
-        Vektor3f v3 = new Vektor3f(2, 3,5);
-
-
-        System.out.println(v3);
-        v3.setX(-4);
-        System.out.println(v3);
-
-        v3.normiere();
-        System.out.println(v3.laenge());
-
-        System.out.println(v3);
-
-
+    public static void main(String[] arg) {
     }
 }
