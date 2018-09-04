@@ -49,7 +49,7 @@ public class Finn_codierer_3 {
         System.out.println(Arrays.toString(x));
 
         System.out.println("\n----------------------------------");
-        short[] encode = keyEncode(x, 23);
+        short[] encode = keyEncode(x, 11);
 
         System.out.println(Arrays.toString(encode));
         System.out.println(shortToString(encode));
