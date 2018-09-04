@@ -5,6 +5,8 @@ import java.util.Arrays;
 
 public class Finn_codierer_3 {
 
+    
+
 
     public static char[] stringToChar(String x) {
         String s = x.toUpperCase();
@@ -29,6 +31,7 @@ public class Finn_codierer_3 {
     }
 
 
+<<<<<<< Updated upstream
     public static short[] keyEncode(short[] s, int key){
         short[] finish = new short[s.length];
         for(int i = 0; i < s.length; i++){
@@ -44,11 +47,30 @@ public class Finn_codierer_3 {
             else{
                 s += (char)(64 + sh);
             }
+=======
+    public static void funktion(short[] x) {
+        int i;
+
+        short[] finish = new short[x.length];
+
+
+        for (i = 0; i < x.length; i += 3) {
+            finish[i] = x[(i + 3) % x.length];
+        }
+        for (i = 1; i < x.length; i += 3) {
+            finish[i] = x[(i + 3) % x.length];
+        }
+        for (i = 2; i < x.length; i += 3) {
+            finish[i] = x[(i + 3) % x.length];
+>>>>>>> Stashed changes
         }
         return s;
     }
 
 
+        for(i = 0; i < x.length; i++){
+            x[i] = finish[i];
+        }
 
 
     public static void main(String[] arg) {
@@ -58,8 +80,20 @@ public class Finn_codierer_3 {
         System.out.println("\n----------------------------------");
         short[] encode = keyEncode(x , 23);
 
+<<<<<<< Updated upstream
         System.out.println(Arrays.toString(encode));
         System.out.println(backToBack(encode));
+=======
+        funktion(x);
+
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i] + " ");
+        }
+
+
+
+
+>>>>>>> Stashed changes
     }
 
 
