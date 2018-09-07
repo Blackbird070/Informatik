@@ -4,13 +4,22 @@ import java.util.ArrayList;
 
 public abstract class Schachfigur {
 
-    int typ;
-    int farbe;
+    private int typ;
+    private int farbe;
+    private Feld feld;
 
 
     public Schachfigur(int typ, int farbe) {
         this.typ = typ;
         this.farbe = farbe;
+    }
+
+    public Feld getFeld() {
+        return feld;
+    }
+
+    public void setFeld(Feld feld) {
+        this.feld = feld;
     }
 
     public abstract ArrayList<Feld> möglicheFelder(Feld[][] a);

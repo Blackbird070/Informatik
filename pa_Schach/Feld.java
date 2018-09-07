@@ -2,22 +2,31 @@ package pa_Schach;
 
 public class Feld {
 
-    int farbe;
-    Schachfigur figur;
+    private Schachfigur figur;
+    private int x;
+    private int y;
 
-
-
-    public Feld(int farbe) {
-        this.farbe = farbe;
+    public Feld(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public int getFarbe() {
-        return farbe;
+    public int getX() {
+        return x;
     }
 
-    public void setFarbe(int farbe) {
-        this.farbe = farbe;
+    public void setX(int x) {
+        this.x = x;
     }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
 
     public Schachfigur getFigur() {
         return figur;

@@ -11,6 +11,8 @@ public class Pferd extends Schachfigur{
 
     @Override
     public ArrayList<Feld> möglicheFelder(Feld[][] a) {
+
+
         return null;
     }
 }
