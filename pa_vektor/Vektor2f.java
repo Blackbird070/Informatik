@@ -57,5 +57,11 @@ public class Vektor2f {
 
 
     public static void main(String[] arg) {
+        Vektor2f v2 = new Vektor2f(2, 3);
+        System.out.println(v2.toString());
+        System.out.println(v2.laenge());
+
+
+
     }
 }
