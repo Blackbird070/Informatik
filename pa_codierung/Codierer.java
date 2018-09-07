@@ -1,5 +1,7 @@
 package pa_codierung;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -75,17 +77,44 @@ public abstract class Codierer {
 
     public static void main(String[] args){
 
-        String s =  Codierer.encode("In der aentike wurde die Mechaenik aels wichtige theoretische Grundlaege vieler heutiger Ingenieurwissenschaeften begruendet aerchimedes aeristoteles und Heron von aelexaendriae veroeffentlichten Buecher und Schriften ueber Hebel Schraeube Schiefe Ebene Seil Flaeschenzug und weitere Erfindungen Kaetaepulte verbesserte maen durch systemaetische Experimente bis maen die besten aebmessungen gefunden haette aerchimedes maechte Experimente mit der Waesserverdraengung verschiedener Metaelle und Heron baeute eine erste Daempfmaeschine Fuer daes griechische Theaeter wurden aeuch schon erste aeutomaeten gebaeut die sich selbstaendig bewegen konnten Die Roemer uebernaehmen die griechische Technik maechten selber aeber vergleichsweise geringe Fortschritte wie Kraene mit Flaeschenzuegen und Tretraedern verbesserte Kaetaepulte und erste Schleif und Drehmaeschinen sowie Waessermuehlen" +
-                "Im Mittelaelter breiteten sich die Wind und Waessermuehlen ueber gaenz Europae aeus und wurden zur wichtigsten Energiequelle Die Muehlenbaeuer saemmelten viele Erfaehrungen mit den Wind und Waesserraedern den Getrieben Traensmissionen sowie den sonstigen mechaenischen uebertraegungselementen aeuf dem militaerischen Gebiet wurden die Kaetaepulte von den Tribocken aebgeloest Gegen Ende des Mittelaelters entstaend mit der Feinmechaenik ein neuer Gewerbezweig der sich mit dem Baeu von Uhren und Messgeraeten beschaeftigte und daebei viele Erfaehrungen mit der Praezisionsbeaerbeitung von Metaellteilen saemmelte die meist aeus Messing bestaenden Fuer die Feinbeaerbeitung von Eisen gaeb es Schlosser Mit den Zuenften und Gilden entstaenden erstmaels Institutionen die sich mit dem Wissen ihres Gewerbes aeuseinaendersetzten", new Complex_KeyCode(new int[]{1,2,3}));
-        System.out.println(s);
+//        String input = ("Homosexuelles Verhalten homosexuelles Begehren und die Sexuelle Identitaet fallen nicht zwingend zusammen und werden deshalb in der Forschung unterschieden In der Umgangssprache werden diese Aspekte jedoch haeufig vermischt oder miteinander gleichgesetzt Sexuelle Handlungen zwischen Maennern und zwischen Frauen wurden in verschiedenen Epochen und Kulturen ganz unterschiedlich behandelt: teils befuerwortet und toleriert teils untersagt und verfolgt Eine besondere Rolle spielen dabei die drei Abrahamitischen Weltreligionen deren Schriftgelehrte den sexuellen Verkehr zwischen Maennern auf der Basis von Bibel Tora und Koran in der Regel als Suende betrachteten auch wenn liberale Stroemungen mit dieser exegetischen Tradition heute zunehmend brechen Gleichgeschlechtliche Liebe und Lust sind in allen Gesellschaften und historischen Epochen durch entsprechende Quellen nachweisbar Dagegen gilt die Entstehung der sexuellen Identitaet im Sinne einer klaren Festlegung des Individuums auf eine bestimmte sexuelle Orientierung heute als das Resultat von Entwicklungen der modernen Gesellschaft Diese setzten ungefaehr im Jahrhundert unserer Zeitrechnung ein und umfassen Aspekte wie das Staedtewachstum die Buerokratisierung und die kapitalistische Versachlichung sozialer Beziehungen Parallel zur Herausbildung heterosexistischer Normen in der Mehrheitsgesellschaft entstanden nach und nach in fast allen europaeischen Metropolen abgegrenzte schwule Subkulturen deren Angehoerige schon bald zum Gegenstand polizeilicher ueberwachung staatlicher Verfolgung krimineller Erpressung und teilweise auch gewaltsamer uebergriffe wurden");
+//
+//        String s =  Codierer.encode(input, new Complex_KeyCode(new int[]{19,3,8,23,21,12}));
+//        System.out.println(s);
+//
+//
+//        printHashMap(occurencies(s,0,6));
+//
+//        String s1 = Codierer.decode(s, new Complex_KeyCode(new int[]{1,2,3}));
+//        System.out.println(s1);
+//
 
 
-        printHashMap(occurencies(s,0,3));
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(2);
+        list.add(3);
+        list.add(6);
 
-        String s1 = Codierer.decode(s, new Complex_KeyCode(new int[]{1,2,3}));
-        System.out.println(s1);
+        System.out.println(list);
+
+        list.remove(new Integer(3));
+
+        System.err.println(list.get(0));
+
+        System.out.println(list);
 
 
+
+        int[] ar = new int[]{2,3,6};
+        ar[1] = 0;
+
+        System.err.println(ar[0]);
+
+        System.out.println(Arrays.toString(ar));
+        /*
+         *
+         *
+         */
 
     }
 }
