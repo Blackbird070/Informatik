@@ -1,4 +1,6 @@
-package pa_Schach;
+package pa_Schach.pa_figuren_leon;
+
+import pa_Schach.Feld;
 
 import java.util.ArrayList;
 

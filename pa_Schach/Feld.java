@@ -1,5 +1,7 @@
 package pa_Schach;
 
+import pa_Schach.pa_figuren_leon.Schachfigur;
+
 public class Feld {
 
     private Schachfigur figur;

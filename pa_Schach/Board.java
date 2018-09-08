@@ -1,5 +1,7 @@
 package pa_Schach;
 
+import pa_Schach.pa_figuren_leon.*;
+
 public class Board {
 
     private Feld[][] schachAr;
@@ -129,14 +131,8 @@ public class Board {
 
     public static void main(String[] args) {
         Board b = new Board();
-
-
-
-
         b.start();
         b.print();
-
-
     }
 
 

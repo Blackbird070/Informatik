@@ -1,7 +1,8 @@
 package pa_Schach.gui;
 
 import pa_Schach.Board;
-import pa_Schach.Schachfigur;
+import pa_Schach.Feld;
+import pa_Schach.pa_figuren_leon.Schachfigur;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -88,36 +89,34 @@ public class GamePanel extends JPanel {
                 buttons[i][n].setIcon(getIcon(i, n));
             }
         }
-//        if (selected_x != -1) {
-//            for (Move z : g.getPossibleMoves()) {
-//                if (z.getX_from() == selected_x && z.getY_from() == selected_y) {
-//                    if (g.getField().getValue(z.getX_to(), z.getY_to()) != 0) {
-//                        buttons[z.getX_to()][z.getY_to()].setBackground(color_takeable);
-//                    } else {
-//                        buttons[z.getX_to()][z.getY_to()].setBackground(color_available);
-//                    }
-//                }
-//            }
-//            buttons[selected_x][selected_y].setBackground(color_selected);
-//        }
+        if (selected != null) {
+            if (selected.getFigur() != null) {
+                for (Feld f : selected.getFigur().möglicheFelder(g.getSchachAr())) {
+                    if (f.getFigur() != null) {
+                        buttons[f.getX()][f.getY()].setBackground(color_takeable);
+                    } else {
+                        buttons[f.getX()][f.getY()].setBackground(color_available);
+                    }
+                }
+            }
+
+            buttons[selected.getX()][selected.getY()].setBackground(color_selected);
+        }
     }
 
-    private int selected_x = -1;
-    private int selected_y = -1;
+    private Feld selected = null;
 
     private void click(int x, int y) {
-//        if (selected_x == -1) {
-//            if (g.getField().getValue(x, y) * g.getActivePlayer() > 0) {
-//                selected_x = x;
-//                selected_y = y;
-//            }
-//        } else {
-//            if (x == selected_x && selected_y == y) {
-//                selected_x = -1;
-//            } else if (g.getField().getValue(x, y) * g.getActivePlayer() > 0) {
-//                selected_x = x;
-//                selected_y = y;
-//            } else {
+        if (selected == null) {
+            if (g.getSchachAr()[x][y].getFigur() != null) {
+                selected = g.getSchachAr()[x][y];
+            }
+        } else {
+            if (x == selected.getX() && y == selected.getY()) {
+                selected = null;
+            } else if (g.getSchachAr()[x][y].getFigur() != null) {
+                selected = g.getSchachAr()[x][y];
+            } else {
 //                for (Move z : g.getPossibleMoves()) {
 //                    if (z.getX_from() == selected_x && z.getY_from() == selected_y && z.getX_to() == x && z.getY_to() == y) {
 //                        g.move(z);
@@ -133,8 +132,9 @@ public class GamePanel extends JPanel {
 //                        break;
 //                    }
 //                }
-//            }
-//        }
+                selected = null;
+            }
+        }
         updateBackgrounds();
     }
 
