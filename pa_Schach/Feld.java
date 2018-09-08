@@ -6,6 +6,7 @@ public class Feld {
     private int x;
     private int y;
 
+
     public Feld(int x, int y) {
         this.x = x;
         this.y = y;
@@ -35,5 +36,6 @@ public class Feld {
     public void setFigur(Schachfigur figur) {
         this.figur = figur;
     }
+
 
 }

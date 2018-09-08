@@ -3,6 +3,7 @@ package pa_Schach;
 public class Board {
 
     private Feld[][] schachAr;
+          //????
 
     //Konstruktor
     public Board() {
@@ -14,6 +15,8 @@ public class Board {
             }
         }
     }
+
+
 
     public Feld[][] getSchachAr() {
         return schachAr;
@@ -58,6 +61,7 @@ public class Board {
         }
 
         int yWeiß = 0;
+
         for (int x = 1; x < schachAr.length; x += 5) {
             Schachfigur pferd = new Pferd(1);
             schachAr[x][yWeiß].setFigur(pferd);
@@ -82,6 +86,7 @@ public class Board {
         schachAr[3][yWeiß].setFigur(koeniginW);
 
         int ySchwarz = 7;
+
         for (int x = 1; x < schachAr.length; x += 5) {
             Schachfigur pferd = new Pferd(-1);
             schachAr[x][ySchwarz].setFigur(pferd);
@@ -124,6 +129,9 @@ public class Board {
 
     public static void main(String[] args) {
         Board b = new Board();
+
+
+
 
         b.start();
         b.print();
