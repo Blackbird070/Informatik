@@ -1,6 +1,7 @@
 package pa_Schach;
 
-import pa_Schach.pa_figuren_leon.*;
+import pa_Schach.pa_figuren_finn.*;
+import pa_Schach.pa_figuren_leon.Schachfigur;
 
 public class Board {
 
@@ -54,63 +55,75 @@ public class Board {
 
         for (int i = 0; i < schachAr.length; i++) {
             Schachfigur bauer = new Bauer(1);
-            schachAr[i][1].setFigur(bauer);
+            setFigur(i, 1, bauer);
+            //schachAr[i][1].setFigur(bauer);
         }
 
         for (int i = 0; i < schachAr.length; i++) {
             Schachfigur bauer = new Bauer(-1);
-            schachAr[i][6].setFigur(bauer);
+            setFigur(i, 6, bauer);
+            //schachAr[i][6].setFigur(bauer);
         }
 
         int yWeiß = 0;
 
         for (int x = 1; x < schachAr.length; x += 5) {
             Schachfigur pferd = new Pferd(1);
-            schachAr[x][yWeiß].setFigur(pferd);
+            setFigur(x, yWeiß, pferd);
+            //schachAr[x][yWeiß].setFigur(pferd);
         }
 
         for (int x = 2; x < schachAr.length; x += 3) {
             Schachfigur laeufer = new Laeufer(1);
-            schachAr[x][yWeiß].setFigur(laeufer);
+            setFigur(x, yWeiß, laeufer);
+            //schachAr[x][yWeiß].setFigur(laeufer);
         }
 
         for (int x = 0; x < schachAr.length; x += 7) {
             Schachfigur turm = new Turm(1);
-            schachAr[x][yWeiß].setFigur(turm);
+            setFigur(x, yWeiß, turm);
+            //schachAr[x][yWeiß].setFigur(turm);
         }
 
 
         Schachfigur koenigW = new Koenig(1);
-        schachAr[4][yWeiß].setFigur(koenigW);
+        setFigur(4, yWeiß, koenigW);
+        //schachAr[4][yWeiß].setFigur(koenigW);
 
 
         Schachfigur koeniginW = new Koenigin(1);
-        schachAr[3][yWeiß].setFigur(koeniginW);
+        setFigur(3, yWeiß, koeniginW);
+        //schachAr[3][yWeiß].setFigur(koeniginW);
 
         int ySchwarz = 7;
 
         for (int x = 1; x < schachAr.length; x += 5) {
             Schachfigur pferd = new Pferd(-1);
-            schachAr[x][ySchwarz].setFigur(pferd);
+            setFigur(x, ySchwarz, pferd);
+            //schachAr[x][ySchwarz].setFigur(pferd);
         }
 
         for (int x = 2; x < schachAr.length; x += 3) {
             Schachfigur laeufer = new Laeufer(-1);
-            schachAr[x][ySchwarz].setFigur(laeufer);
+            setFigur(x, ySchwarz, laeufer);
+            //schachAr[x][ySchwarz].setFigur(laeufer);
         }
 
         for (int x = 0; x < schachAr.length; x += 7) {
             Schachfigur turm = new Turm(-1);
-            schachAr[x][ySchwarz].setFigur(turm);
+            setFigur(x, ySchwarz, turm);
+            //schachAr[x][ySchwarz].setFigur(turm);
         }
 
 
         Schachfigur koenigS = new Koenig(-1);
-        schachAr[4][ySchwarz].setFigur(koenigS);
+        setFigur(4, ySchwarz, koenigS);
+        //schachAr[4][ySchwarz].setFigur(koenigS);
 
 
         Schachfigur koeniginS = new Koenigin(-1);
-        schachAr[3][ySchwarz].setFigur(koeniginS);
+        setFigur(3, ySchwarz, koeniginS);
+        //schachAr[3][ySchwarz].setFigur(koeniginS);
 
     }
 
@@ -127,7 +140,6 @@ public class Board {
         this.setFigur(x2, y2, schachAr[x1][y1].getFigur());
         this.removeFigur(x1, y1);
     }
-
 
     public static void main(String[] args) {
         Board b = new Board();
