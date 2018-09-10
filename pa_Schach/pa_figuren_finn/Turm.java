@@ -13,6 +13,12 @@ public class Turm extends Schachfigur{
 
     @Override
     public ArrayList<Feld> möglicheFelder(Feld[][] a) {
-        return null;
+        return Koenigin.möglicheFelder_directions(a, this.getFeld(), new int[][]{{1,0}, {0,1}, {-1,0}, {0,-1}});
     }
+
+    
+
+
+
+
 }

@@ -13,6 +13,8 @@ public class Laeufer extends Schachfigur {
 
     @Override
     public ArrayList<Feld> möglicheFelder(Feld[][] a) {
-        return null;
+        return Koenigin.möglicheFelder_directions(a, this.getFeld(),
+                new int[][]{{1,1}, {-1,1}, {1,-1}, {-1,-1}});
     }
+
 }

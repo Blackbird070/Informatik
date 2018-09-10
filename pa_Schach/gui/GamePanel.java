@@ -114,24 +114,16 @@ public class GamePanel extends JPanel {
         } else {
             if (x == selected.getX() && y == selected.getY()) {
                 selected = null;
-            } else if (g.getSchachAr()[x][y].getFigur() != null) {
+            } else if (g.getSchachAr()[x][y].getFigur() != null &&
+                    g.getSchachAr()[x][y].getFigur().getFarbe() == selected.getFigur().getFarbe()) {
                 selected = g.getSchachAr()[x][y];
             } else {
-//                for (Move z : g.getPossibleMoves()) {
-//                    if (z.getX_from() == selected_x && z.getY_from() == selected_y && z.getX_to() == x && z.getY_to() == y) {
-//                        g.move(z);
-//
-//                        LinkedList<Move> possible = g.getPossibleMoves();
-//                        g.orderPossibleMoves(possible);
-//                        for (Move m : possible) {
-//                            System.out.println(m);
-//                        }
-//                        //g.move(KI.getBestMove(g,5));
-//
-//                        selected_x = -1;
-//                        break;
-//                    }
-//                }
+                for(Feld f:selected.getFigur().möglicheFelder(g.getSchachAr())){
+                    if(g.getSchachAr()[x][y] == f){
+                        g.moveFigur(selected.getX(), selected.getY(), x, y);
+                        break;
+                    }
+                }
                 selected = null;
             }
         }
