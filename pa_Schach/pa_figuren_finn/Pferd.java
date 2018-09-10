@@ -21,9 +21,11 @@ public class Pferd extends Schachfigur {
 
         int[][] directions = new int[][]{{1, 2}, {-1, 2}, {1, -2}, {-1, -2}, {2, 1}, {-2, 1}, {2, -1}, {-2, -1}};
         for (int[] dir : directions) {
-            if (x + dir[0] >= 0 && x + dir[0] < 8 && y + dir[1] >= 0 && y + dir[1] < 8) {
-                if (a[x + dir[0]][y + dir[1]].getFigur() == null || a[x + dir[0]][y + dir[1]].getFigur().getFarbe() != this.getFarbe()) {
-                    mFelder.add(a[x + dir[0]][y + dir[1]]);
+            int t_x = x + dir[0];
+            int t_y = y + dir[1];
+            if (t_x >= 0 && t_x < 8 && t_y >= 0 && t_y < 8) {
+                if (a[t_x][t_y].getFigur() == null || a[t_x][t_y].getFigur().getFarbe() != this.getFarbe()) {
+                    mFelder.add(a[t_x][t_y]);
                 }
             }
         }
