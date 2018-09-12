@@ -33,9 +33,10 @@ public class Frame extends JFrame {
     }
 
     public static void main(String[] args) {
-        Board b = new Board();
-        b.start();
-        Frame f = new Frame(b);
+        int a;
+        a = (3 % 2 == 1) ? 4:2;
+        System.out.println(a);
+
     }
 
 }

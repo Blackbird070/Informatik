@@ -1,6 +1,6 @@
 package pa_Schach;
 
-import pa_Schach.pa_figuren_finn.*;
+import pa_Schach.pa_figuren_leon.*;
 import pa_Schach.pa_figuren_leon.Schachfigur;
 
 public class Board {
