@@ -77,17 +77,6 @@ public abstract class Codierer {
 
     public static void main(String[] args){
 
-//        String input = ("Homosexuelles Verhalten homosexuelles Begehren und die Sexuelle Identitaet fallen nicht zwingend zusammen und werden deshalb in der Forschung unterschieden In der Umgangssprache werden diese Aspekte jedoch haeufig vermischt oder miteinander gleichgesetzt Sexuelle Handlungen zwischen Maennern und zwischen Frauen wurden in verschiedenen Epochen und Kulturen ganz unterschiedlich behandelt: teils befuerwortet und toleriert teils untersagt und verfolgt Eine besondere Rolle spielen dabei die drei Abrahamitischen Weltreligionen deren Schriftgelehrte den sexuellen Verkehr zwischen Maennern auf der Basis von Bibel Tora und Koran in der Regel als Suende betrachteten auch wenn liberale Stroemungen mit dieser exegetischen Tradition heute zunehmend brechen Gleichgeschlechtliche Liebe und Lust sind in allen Gesellschaften und historischen Epochen durch entsprechende Quellen nachweisbar Dagegen gilt die Entstehung der sexuellen Identitaet im Sinne einer klaren Festlegung des Individuums auf eine bestimmte sexuelle Orientierung heute als das Resultat von Entwicklungen der modernen Gesellschaft Diese setzten ungefaehr im Jahrhundert unserer Zeitrechnung ein und umfassen Aspekte wie das Staedtewachstum die Buerokratisierung und die kapitalistische Versachlichung sozialer Beziehungen Parallel zur Herausbildung heterosexistischer Normen in der Mehrheitsgesellschaft entstanden nach und nach in fast allen europaeischen Metropolen abgegrenzte schwule Subkulturen deren Angehoerige schon bald zum Gegenstand polizeilicher ueberwachung staatlicher Verfolgung krimineller Erpressung und teilweise auch gewaltsamer uebergriffe wurden");
-//
-//        String s =  Codierer.encode(input, new Complex_KeyCode(new int[]{19,3,8,23,21,12}));
-//        System.out.println(s);
-//
-//
-//        printHashMap(occurencies(s,0,6));
-//
-//        String s1 = Codierer.decode(s, new Complex_KeyCode(new int[]{1,2,3}));
-//        System.out.println(s1);
-//
 
 
         ArrayList<Integer> list = new ArrayList<>();
@@ -111,10 +100,9 @@ public abstract class Codierer {
         System.err.println(ar[0]);
 
         System.out.println(Arrays.toString(ar));
-        /*
-         *
-         *
-         */
+
+        String s =  Codierer.decode(" RUKMQPXMHFQKCCALTTOAAHL RUKMQPXMHFQKCJAAQ UMJUFFGH CQSVMTOQDOMWCPXQAENMXWHBVXDHVWHUVKAWTHAQOAHPSBBOVYEHVWOZWCDALPXQH ZD DTYUUFCLALLYRZOXTMQOWOZLHZOXTAHLAHLAQH ZCSXUCVZZV LLMVKMWQQJGMJUPAH AUMKSMGNQSMM IO CPXZFYLOWPQJPQOXTLCW ZCSPQPZUFDV ZCSJTACO JMOZERWHOZIMHTHZL DV FFFJMJUKOL ZBQFCUXZZFHZJUFFGHVQUKFPAHLYUIQZZSZBNYQFCQJUGXU ZBUXGMJZZSHXKXTXQHQHPSNBHNFJHVWAMFBHQHEXU ZBUXGTEXTSEMDVZWHTPOLLHQHMLUHNQZCORZPZESXV UEGOMNCQJWHPZUDVHQHEXU XAESXV UGXUNKFSLCMEHQSEMOIZWHZAUCGOTAUDHLMHZZSGIYZUSGQAUPJHQWVNJDPXGULL ZBQFCDAFEJHTEAUGQMJUPXUMJUDVKZE EZHTABCLHH ZZSVMTOQDOMJUGXUSABCSBDEMO HVWGMXQVALZSDBBUPXUHYVDAVHRIZSEQYZXSWWNVLMQLWE JDVWCZSGMNUCXJMHUMDVHOOQFGMWWQLUIZBEXWMJUMMFPWQQFQHHCNXUIHZLKWZKZYMQOAHLELAWYUXVMNUQPHOANUKFPAHLLUI CEARVWBQMWMWTFFHPIZZWCJNZO HVWAXXLKDAQKFPHZO WTEXTXCTEZNXCBJYLDX PUDAQLWCZSDTHZZSJMOZXDVKDVRLHVWOZWCPEMEGUQOXTXQHAJ VKMJUPMUKDUQFW LLQVKMJYQSTBAFXXQHJVO ZMEMNTUH VSXJMJUSAOAWYUXCMJNDLHPQHSSGMNUDX BAFXXQHEYQFWQPVQLCQIUDAQVAUQAQMNUWDDZAHLYH PFQZXVCUPXVHEHPAYQ OFEVHXORSHQJZLUH PCYEWMWMQPXMHFQSRZEZZLLMNOZZCPAOEXCIHMLWD WLQKXTPVESYWJUQFWDEXWDXVCZZSGMNUYGGMNHQFCOAMQDO ZBMYWH CQKHHOZERWMJUFFJMBVQ UHEGLBDPNBFFGMNNLMQ ALQJCGACEJHKDHFFJHACZSXV UFEIIOMQFCIOJQCWMWQUXCLXMLKWIAYEXZIZBDLXUWYUXCJQZCGNZXNUKLMNOZZCBJYLWLMWEMHLAXFUKWQOXTXCCALDTFPHCO XVCUDGBQXFQJCJATUXKBJAQFCXXLMDOMHUKMUHDZCTX YCXWXVCUTXWMNIDX QONUKFPALLFRZIZZSLVWYQJCUABC HQPMSXVMHFDVKIBNLXQAONMFGMJUZTFPWOZWCVXXTSLVW MKWHXFXXQHAOCGSIACDVKMJUYXWZKJ DHVWVNZHONZZRWMWMO ZBHZLKXJGOXLXZAHLWHZAHLTQOAB XUQCZLKFPKHLUDT UKMPHCZSXQ PVZWCXKFURHQHCO HZWOQUHZSVO XVCUDLDIPFUVKMNUGXUNKFSMQOWECAPQJZXDHZWZCHUMOMFFJHQHPSWMEFHXL AUMMFPWAQODTPMMEHZWOQUHZCLUYIMWQFJGMJ", new Complex_KeyCode(new int[]{19,3,8,23,21,12}));
+        System.out.println(s);
 
     }
 }

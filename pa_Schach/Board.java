@@ -30,7 +30,7 @@ public class Board {
     }
 
     public void print() {
-        System.out.println("# # # # # # # # # #");
+        System.out.println("#  #  #  #  #  #  #  #  #  #");
         for (int y = schachAr.length - 1; y >= 0; y--) {
             System.out.print("#");
             for (int x = 0; x < schachAr.length; x++) {
