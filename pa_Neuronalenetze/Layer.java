@@ -32,4 +32,10 @@ public class Layer {
         }
     }
 
+    public void backN(){
+        for (Neuron n:neurons){
+            n.feedError();
+        }
+    }
+
 }

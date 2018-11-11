@@ -26,11 +26,33 @@ public class Network {
         for(int i = 0; i < layers[layers.length - 1].getNeurons().length; i++){
             output[i] += layers[layers.length - 1].getNeurons()[i].getOutput();
         }
-
-
         return output;
+    }
 
+    public void backpropagate(double... exspected){
+        for(Layer l:layers){
+            for(Neuron n:l.getNeurons()){
+                n.setOutput_error(0);
+            }
+        }
+        for(int i = 0; i < layers[layers.length - 1].getNeurons().length; i++){
+            layers[layers.length - 1].getNeurons()[i].setOutput_error(
+                    (layers[layers.length - 1].getNeurons()[i].getOutput() - exspected[i]) * layers[layers.length-1].getNeurons()[i].getOutput_der()
+            );
+        }
+        for(int i = layers.length; i > 0; i--){
+            layers[i].feedN();
+        }
+    }
 
+    public void updateWeight(){
+        for(int i = layers.length; i > 0; i--){
+            for(Neuron n: layers[i].getNeurons()){
+                for(Connection c: n.getConnections()){
+                    c.setWeight(c.getWeight() + c.getStartN().getOutput() * c.getEndN().getOutput_error());
+                }
+            }
+        }
     }
 
     public static void main(String... arg){
