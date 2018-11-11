@@ -2,25 +2,37 @@ package pa_Neuronalenetze;
 
 public class Neuron {
 
-    private Connection[] arConnection;
     private double output;
+    private Connection[] connections;
 
-    public Neuron(Neuron[] arNeuron){
-        arConnection = new Connection[arNeuron.length];
-        for(int i = 0; i < arConnection.length; i++){
-            arConnection[i] = new Connection(arNeuron[i], Math.random()*2-1);
+    public Neuron(Neuron[] lastN){
+        connections = new Connection[lastN.length];
+        for(int i = 0; i < lastN.length; i++){
+            connections[i] = new Connection(lastN[i], this, 0.5);
         }
-    }
 
+    }
     public Neuron(){
     }
 
-    public void calculate(){
-        double x = 0;
-        for(int i = 0; i < arConnection.length; i++) {
-            x = arConnection[i].getW() * arConnection[i].getNeuron().output;
+    public void functionN(double input){
+        output = 1 / (1 + Math.exp(-input));
+    }
+
+    public double getOutput() {
+        return output;
+    }
+
+    public void setOutput(double output) {
+        this.output = output;
+    }
+
+    public void feed(){
+        double f = 0;
+        for (Connection c:connections) {
+            f += c.partialInput();
         }
-        output = 1/(1 + Math.exp(-x));
+        functionN(f);
     }
 
 }

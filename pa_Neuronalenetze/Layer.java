@@ -2,19 +2,33 @@ package pa_Neuronalenetze;
 
 public class Layer {
 
-    private Neuron[] arNeurons;
+    private Neuron[] neurons;
 
-    public Layer(int anN){
-        arNeurons = new Neuron[anN];
-        for(int i = 0; i < arNeurons.length; i++){
-            arNeurons[i] = new Neuron();
+    public Neuron[] getNeurons() {
+        return neurons;
+    }
+
+    public void setNeurons(Neuron[] neurons) {
+        this.neurons = neurons;
+    }
+
+    public Layer(int a, Layer lastL){
+        neurons = new Neuron[a];
+        for(int i = 0; i < neurons.length; i++){
+            neurons[i] = new Neuron(lastL.neurons);
         }
     }
 
-    public Layer(int anN, Layer preL){
-        arNeurons = new Neuron[anN];
-        for(int i = 0; i < arNeurons.length; i++){
-            arNeurons[i] = new Neuron(preL.arNeurons);
+    public Layer(int a){
+        neurons = new Neuron[a];
+        for(int i = 0; i < neurons.length; i++){
+            neurons[i] = new Neuron();
+        }
+    }
+
+    public void feedN(){
+        for (Neuron n:neurons) {
+            n.feed();
         }
     }
 

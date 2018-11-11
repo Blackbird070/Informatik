@@ -1,8 +1,10 @@
 package pa_Schach;
 
+import pa_Schach.pa_figuren_leon.Schachfigur;
+
 import java.util.ArrayList;
 
-public class Pferd extends Schachfigur{
+public class Pferd extends Schachfigur {
 
     public Pferd(int farbe){
         super(3, farbe);

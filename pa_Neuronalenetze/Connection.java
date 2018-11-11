@@ -2,27 +2,43 @@ package pa_Neuronalenetze;
 
 public class Connection {
 
-    private double w;
-    private Neuron neuron;
+    private Neuron startN;
+    private Neuron endN;
+    private double weight;
 
-    public Connection(Neuron neuron, double w){
-        this.neuron = neuron;
-        this.w = w;
+    public Connection(Neuron startN, Neuron endN, double weight) {
+        this.startN = startN;
+        this.endN = endN;
+        this.weight = weight;
     }
 
-    public double getW() {
-        return w;
+    public Neuron getStartN() {
+        return startN;
     }
 
-    public void setW(double w) {
-        this.w = w;
+    public void setStartN(Neuron startN) {
+        this.startN = startN;
     }
 
-    public Neuron getNeuron() {
-        return neuron;
+    public Neuron getEndN() {
+        return endN;
     }
 
-    public void setNeuron(Neuron neuron) {
-        this.neuron = neuron;
+    public void setEndN(Neuron endN) {
+        this.endN = endN;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public double partialInput(){
+        double d;
+        d = startN.getOutput() * weight;
+        return d;
     }
 }
